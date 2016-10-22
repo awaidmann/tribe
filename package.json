@@ -1,0 +1,33 @@
+{
+  "name": "tribe",
+  "version": "1.0.0",
+  "description": "Firebase based public key infrastructure and Web of Trust for JS, Android, and iOS",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awaidmann/tribe.git"
+  },
+  "keywords": [
+    "firebase",
+    "wot",
+    "web",
+    "trust",
+    "pki",
+    "\"asymmetric",
+    "key",
+    "pair\"",
+    "crypto",
+    "public",
+    "private",
+    "elliptic"
+  ],
+  "author": "awaidmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/awaidmann/tribe/issues"
+  },
+  "homepage": "https://github.com/awaidmann/tribe#readme"
+}
