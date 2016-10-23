@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-tribe-signature"
+    version="0.0.1">
+    <name>signature</name>
+    <description>Data signing and validation</description>
+    <license>MIT</license>
+    <repo></repo>
+    <issue></issue>
+
+    <js-module src="cordova/signature.js" name="signature">
+        <clobbers target="signature" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+      <config-file target="config.xml" parent="/*">
+          <feature name="signature">
+              <param name="android-package" value="com.tribe.plugin.signature"/>
+          </feature>
+      </config-file>
+
+      <source-file src="cordova/android/SignaturePlugin.java" target-dir="src/com/tribe/plugin" />
+      <source-file src="native/android/DataSignature.java" target-dir="src/com/tribe/plugin" />
+      <source-file src="native/android/KeyManager.java" target-dir="src/com/tribe/plugin" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+      <config-file target="config.xml" parent="/*">
+          <feature name="tribe-signature">
+              <param name="ios-package" value="TRSignaturePlugin"/>
+          </feature>
+      </config-file>
+
+      <header-file src="cordova/ios/TRSignaturePlugin.h" />
+      <source-file src="cordova/ios/TRSignaturePlugin.m" />
+      <header-file src="native/ios/TRKeyManager.h" />
+      <source-file src="native/ios/TRKeyManager.m" />
+      <header-file src="native/ios/TRSignature.h" />
+      <source-file src="native/ios/TRSignature.m" />
+      <source-file src="native/ios/external/CryptoExportImportManager.swift" />
+    </platform>
+
+</plugin>
